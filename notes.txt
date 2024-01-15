@@ -1,0 +1,6 @@
+npx prisma init
+npx prisma db push
+
+openssl rand -base64 32
+
+curl -d '{"name":"Rahul Singh", "email":"rahul@rahul.com", "password": "rahul"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/auth/register
