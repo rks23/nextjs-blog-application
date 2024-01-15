@@ -10,23 +10,26 @@ export const POST = async (req: Request) => {
   }
   try {
     await connectToDb();
-    const hashedPassword = await bcrypt.hash(password, 10)
+    const hashedPassword = await bcrypt.hash(password, 10);
     const user = await primsa.user.create({
       data: {
         name,
         email,
-        password: hashedPassword
-      }
+        password: hashedPassword,
+      },
     });
     return NextResponse.json({
       message: "user successfully create",
       ...user,
-    })
-  } catch (error) {
-    return NextResponse.json({
-      message: "server error",
-      ...error,
-    }, { status: 500 })
+    });
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        message: "server error",
+        ...error,
+      },
+      { status: 500 }
+    );
   } finally {
     await primsa.$disconnect();
   }
