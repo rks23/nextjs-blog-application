@@ -1,7 +1,9 @@
-export default /*async*/ function Home() {
+import HomeSection from "./components/HomeSection";
+
+export default function Home() {
   return (
     <main>
-      <div>Hello World!</div>
+      <HomeSection />
     </main>
   );
 }

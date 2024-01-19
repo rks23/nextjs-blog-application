@@ -15,9 +15,10 @@ curl -d '{"name": "Technology"}' -H "Content-Type: application/json"  -X POST ht
 
 curl -d '{"name": "Education"}' -H "Content-Type: application/json"  -X POST http://localhost:3000/api/categories
 
-curl -X GET http://localhost:3000/api/categories 
+curl -X GET http://localhost:3000/api/categories
 
 curl --location 'http://localhost:3000/api/blogs' --form 'postData="{\"title\":\"First Blog\",\"decription\":\"Hello world, my first blog\",\"location\":\"Ktm, Nepal\",\"userId\":\"65a4e6af60ddc9a2679805a0\",\"categoryId\":\"65a4fed40dfa8a3bd37a158c\"}"' --form 'image=@"/C:/Users/DELL/Pictures/sample.png"'
 
 curl -X GET http://localhost:3000/api/blogs
 
+current: 4. getting blogs from server
