@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HomeSection = () => {
   return (
     <section className="w-full my-4">
@@ -10,6 +12,15 @@ const HomeSection = () => {
             Learn it by doing it for FREE with practical step by step Series and
             Articles
           </p>
+        </div>
+        <div className="md:w-2/4 xs:w-3/4 md:mx-2 xs:my-2">
+          <Image
+            className="w-full rounded-2xl drop-shadow-2xl"
+            alt="carousel image"
+            width={300}
+            height={200}
+            src="https://plus.unsplash.com/premium_photo-1682140999442-e9e2a5f55be6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
         </div>
       </div>
     </section>
